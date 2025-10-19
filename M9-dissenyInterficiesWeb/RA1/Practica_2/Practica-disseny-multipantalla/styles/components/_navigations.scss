@@ -1,0 +1,36 @@
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    padding: 15px;
+}
+
+.menuHeader {
+    font-family: 'ArialMT';
+    font-size: var(--font-sm);
+    color: var(--letra2);
+}
+
+.menuFooter {
+    font-family: 'ArialMT';
+    font-size: var(--font-sm);
+    color: var(--letra2);
+}
+
+.homeUp {
+    text-decoration: none;
+}
+
+.opt {
+    text-decoration: none;
+}
+
+.menuFooter a {
+    border-right: 1px solid black;
+}
+
+// .menuFooter a:last-child {
+//     border-right: none;
+// }

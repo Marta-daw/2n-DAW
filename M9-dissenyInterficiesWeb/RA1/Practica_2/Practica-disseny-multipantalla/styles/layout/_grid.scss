@@ -1,0 +1,188 @@
+@use '../abstract/' as *;
+
+/*.container {
+    max-width: $breakpoint-large;
+    margin: 0 auto;
+    padding: 0 15px;
+}*/
+
+@media screen and (max-width:$breakpoint-small) {
+    .gridHead {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .gridBody {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        grid-template-areas:
+            "bann"
+            "titol"
+            "A"
+            "B"
+            "C"
+            "cont"
+            "form"
+            "media"
+        ;
+    }
+
+    .gridFoot {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width:$breakpoint-small) and (max-width:$breakpoint-medium) {
+    .gridHead {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .gridBody {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        grid-template-areas:
+            "bann titol"
+            "A B"
+            "C form"
+            "cont media"
+        ;
+    }
+
+
+    .gridFoot {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width:$breakpoint-medium) {
+    .gridHead {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .gridBody {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        //grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+
+        grid-template-areas:
+            "bann bann titol"
+            "A B C"
+            "cont cont form"
+            ".     .    media"
+        ;
+    }
+
+
+    .gridFoot {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+}
+
+.banner {
+    grid-area: bann;
+}
+
+.title {
+    grid-area: titol;
+}
+
+.info1 {
+    grid-area: A;
+}
+
+.info2 {
+    grid-area: B;
+}
+
+.info3 {
+    grid-area: C;
+}
+
+.content {
+    grid-area: cont;
+}
+
+.form {
+    grid-area: form;
+}
+
+.media {
+    grid-area: media;
+}
+
+/*.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "cap"
+        "bann"
+        "titol"
+        "A"
+        "B"
+        "C"
+        "cont"
+        "form"
+        "media"
+        "peu"
+    ;
+}
+
+
+header {
+    grid-area: cap;
+}
+
+.banner {
+    grid-area: bann;
+}
+
+.title {
+    grid-area: titol;
+}
+
+.info1 {
+    grid-area: A;
+}
+
+.info2 {
+    grid-area: B;
+}
+
+.info3 {
+    grid-area: C;
+}
+
+.content {
+    grid-area: cont;
+}
+
+.form {
+    grid-area: form;
+}
+
+.media {
+    grid-area: media;
+}
+
+footer {
+    grid-area: peu;
+}*/

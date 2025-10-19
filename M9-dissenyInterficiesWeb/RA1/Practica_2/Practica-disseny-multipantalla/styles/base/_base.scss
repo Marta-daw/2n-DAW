@@ -1,0 +1,83 @@
+@use '../abstract/' as *;
+
+* {
+    box-sizing: content-box;
+
+}
+
+#principal {
+    //border: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    font-family: $font-primary;
+    //font-size: $font-size-h1;
+
+}
+
+.h1 {
+    font-family: 'Century Gothic';
+    font-size: var(--font-xl);
+}
+
+h1 span {
+    color: var(--orangeCC)
+}
+
+.title {
+    background-color: white;
+    padding: 20px;
+}
+
+.p1 {
+    font-family: 'Century Gothic';
+    font-size: var(--font-sm);
+    color: var(--color9);
+}
+
+.p2 {
+    font-family: 'ArialMT';
+    font-size: var(--font-xs);
+    color: var(--letra2);
+}
+
+.welcome {
+    font-family: 'Century Gothic';
+    font-size: var(--font-lg);
+    color: var(--orangeCC);
+}
+
+.media h2 {
+    font-family: 'Century Gothic';
+    font-size: var(--font-md);
+    color: var(--orangeCC);
+}
+
+.gridHead {
+    background-color: var(--colorD8);
+}
+
+.gridBody {
+    //border: solid 2px black;
+    background-color: var(--colorE4);
+    padding: 10px;
+    margin: 0;
+    font-family: $font-primary;
+    font-size: $font-size-base;
+}
+
+footer {
+    //border: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    background-color: var(--colorEB);
+}
+
+.copyright span {
+    color: var(--orangeCC)
+}
