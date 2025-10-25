@@ -105,13 +105,19 @@ print(seconds)
 """ 5- Crea una funció temps que calculi la quantitat d’hores, minuts i segons d’un temps donat en segons.
 hores, minuts, segons = temps(segons) """
 
-#2h son 7200segons
+def temps(segons):
+    minuts=segons//60
+    restoSegons=segons%60
+    hores=minuts//60
+    restoMinuts=minuts%60
 
-#minuts=segons/60
-#restoSegons=segons%60
+    return (hores, restoMinuts, restoSegons)
 
-#hores=minuts/60
-#restoHores=minuts%60
+segons= 7257
+
+calculSeg=temps(segons)
+
+print(calculSeg)
 
 """ 6- Escriu una funció esvocal que a partir un caràcter torni True si el caràcter és una vocal o False en cas contrari.
 if esvocal(caracter):
@@ -119,17 +125,33 @@ if esvocal(caracter):
 else:
     print(caracter, “NO és una vocal”) """
 
-#match (caracter):
-#   case a | A | e | E | i | I | o | O | u | U:
-#       print(caracter, “és una vocal”)
-#   case _:
-#       print(caracter, “NO és una vocal”)
+def esVocal(caracter):
+    match (caracter):
+        case 'a' | 'A' | 'e' | 'E' | 'i' | 'I' | 'o' | 'O' | 'u' | 'U':
+            return (caracter, "és una vocal")
+        case _:
+            return (caracter, "NO és una vocal")
+        
 
+caracter="A"
+
+vocal=esVocal(caracter)
+
+print(vocal)
 
 """7 -Crea una funció canviaMorse programa que sigui capaç de transformar text natural a codi morse i viceversa.
 Heu de detectar automàticament de quin tipus es tracta i realitzar la conversió.
 En morse se suporta ratlla "-", punt ".", s'ha de fer servir un espai " " per separar lletres i dos espais "  " entre paraules.
 L'alfabet morse suportat serà el mostrat a https://es.wikipedia.org/wiki/Código_morse. """
+
+morse_dict = {
+    'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 
+    'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
+    'K': '-.-', 'L': '.-..', 'M': '--', 'N':'-.', 'Ñ':'--.--',
+    'O':'---', 'P':'.--.', 'Q': '--.-', 'R':'.-.', 'S': '...',
+    'T': '-', 'U':'..-', 'V': '...-', 'W':'.--', 'X':'-..-',
+    'Y': '-.--', 'Z': '--..'
+}
 
 #morse_dict = {
 #    'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 
@@ -158,11 +180,28 @@ Exemples:
 Em dic mouredev / Em dic meuredov -> ["e", "o"]
 Em dic.Brais Moure / Em dic brais moure -> [" ", "b", "m"] """
 
-#def diferencies(text1, text2):
-    # Comprovar que la longitud de les dos cadenes siguin iguals
-    # Crear llista buida per guardar diferències
-    # Recórrer amb un for, comparar caràcter a caràcter i quan trobis la diferència afegir el caracter diferent de la cadena text2 a una llista nova
-    # Retornar llista
+def diferencies(text1, text2):
+
+    text3=[]
+    longMinim=min(len(text1), len(text2))
+        
+    for i in range(longMinim):
+        if text1[i] !=text2[i]:
+            text3.append(text2[i])
+    
+    # Afegir caràcters restants si text2 és més llarga
+    if len(text2) > len(text1):
+        for i in range(len(text1), len(text2)):
+            text3.append(text2[i])
+
+    return text3
+
+text1="Em dic Marta"
+text2="Em dic Carla"
+
+textDif=diferencies(text1, text2)
+
+print (textDif)
 
 """ 9-Crea una funció comptaLA que a partir d'una frase retorni la quantitat de LA trobades.
 No es diferencia entre majúscules i minúscules. No s'ha de fer servir el mètode count.
@@ -170,14 +209,22 @@ Exemple:
 Ell s'ha passat la tarda cantant La, LA, lA, ...
 Retorna 4 """
 
-#frase = frase.upper() // i així no ens preocupem per les majuscules i minuscules
-# def comptaLA(frase):
-    # Convertir a majúscules
-    # Inicialitzar comptador a 0
-    # Recórrer des de 0 fins len(frase)-1
-    #   Si frase[i:i+2] == "LA":
-    #       augmentar comptador
-    # Retornar comptador
+def comptaLA (cadena, busca):
+    frase=cadena.upper()
+    compt=0
+    i=0
+    
+    for i in range (len(frase)-1):
+        if frase[i:i+2]=="LA":
+            compt+=1
+
+    return "S'han trobat "+ str(compt)+" vegades"
+
+cadena="Ell s'ha passat la tarda cantant La, LA, lA, ..."
+busca="LA"
+
+cuentaLA=comptaLA(cadena, busca)
+print (cuentaLA)
 
 """ 10-Crea una funció comptaLES que a partir d'una frase retorni la quantitat de LES trobades.
 No es diferencia entre majúscules i minúscules. No s'ha de fer servir el mètode count.
@@ -185,11 +232,19 @@ Exemple:
 Ell es passa totes les tardes cantant LaLESlesla...
 Retorna 3 """
 
-#frase = frase.upper() // i així no ens preocupem per les majuscules i minuscules
-# def comptaLA(frase):
-    # Convertir a majúscules
-    # Inicialitzar comptador a 0
-    # Recórrer des de 0 fins len(frase)-2 //per tenir espai per 3 caràcters
-    #   Si frase[i:i+3] == "LES":
-    #       augmentar comptador
-    # Retornar comptador
+def comptaLES (cadena, busca):
+    frase=cadena.upper()
+    compt2=0
+    i=0
+    
+    for i in range (len(frase)-1):
+        if frase[i:i+3]=="LES":
+            compt2+=1
+
+    return "S'han trobat "+ str(compt2)+" vegades"
+
+cadena="Ell es passa totes les tardes cantant LaLESlesla..."
+busca="LES"
+
+cuentaLES=comptaLES(cadena, busca)
+print (cuentaLES)

@@ -61,4 +61,20 @@ $breakpoint-large: 1240px;
     --orangeO: #f3e1ca;
     --orangeP: #f4ece6;
 
+    //light theme
+    --primary-color: var(--orangeCC);
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292929;
+
+    //dark theme
+    [data-theme="dark"] {
+        --primary-color: #9A97F3;
+        --secondary-color: #818cab;
+        --font-color: #e1e1ff;
+        --bg-color: #161625;
+        --heading-color: #818cab;
+    }
+
 }

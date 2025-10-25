@@ -2,7 +2,8 @@
 
 * {
     box-sizing: content-box;
-
+    margin: 0;
+    padding: 0;
 }
 
 #principal {
@@ -13,7 +14,19 @@
     margin: 0;
     font-family: $font-primary;
     //font-size: $font-size-h1;
+}
 
+.dark {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: var(--colorD8);
+    margin: auto;
+}
+
+.menuHeader {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .h1 {
@@ -21,8 +34,14 @@
     font-size: var(--font-xl);
 }
 
+.h1Info {
+    font-family: 'Century Gothic';
+    font-size: 50px;
+    margin-left: 10px;
+}
+
 h1 span {
-    color: var(--orangeCC)
+    color: var(--primary-color)
 }
 
 .title {
@@ -45,13 +64,13 @@ h1 span {
 .welcome {
     font-family: 'Century Gothic';
     font-size: var(--font-lg);
-    color: var(--orangeCC);
+    color: var(--primary-color);
 }
 
 .media h2 {
     font-family: 'Century Gothic';
     font-size: var(--font-md);
-    color: var(--orangeCC);
+    color: var(--primary-color);
 }
 
 .gridHead {
@@ -67,6 +86,11 @@ h1 span {
     font-size: $font-size-base;
 }
 
+.imageF {
+    width: 30px;
+    height: 30px;
+}
+
 footer {
     //border: solid 2px black;
     display: flex;
@@ -79,5 +103,5 @@ footer {
 }
 
 .copyright span {
-    color: var(--orangeCC)
+    color: var(--primary-color)
 }
