@@ -1,21 +1,6 @@
 //Exercici 28
 const calc=document.getElementById("calculadora");
 
-function inic() {
-    creaInputs();
-    calcul();
-
-    crearInputs2();
-    dades();
-
-    creaInputs3();
-    dades2();
-
-    formatPrimer();
-    formatSegon();
-    actualitzaData();
-}
-
 function creaInputs (){
     let divInputPrimer=document.querySelector("#div");
     
@@ -315,3 +300,15 @@ contenidor.addEventListener('dblclick', () =>{
     formatAct = formatAct=== 1 ? 2 : 1;
 })
 
+creaInputs();
+    calcul();
+
+    crearInputs2();
+    dades();
+
+    creaInputs3();
+    dades2();
+
+    formatPrimer();
+    formatSegon();
+    actualitzaData();

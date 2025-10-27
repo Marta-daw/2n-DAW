@@ -18,6 +18,21 @@
         ;
     }
 
+    .gridClient {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        grid-template-areas:
+            "clientArticle"
+            "divCli1"
+            "divCli2"
+            "divCli3"
+            "divCli4"
+            "tesimonial"
+        ;
+    }
+
     .gridFoot {
         display: grid;
         grid-template-columns: 1fr;
@@ -39,6 +54,19 @@
         ;
     }
 
+    .gridClient {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        grid-template-areas:
+            "clientArticle tesimonial"
+            "divCli1"
+            "divCli2"
+            "divCli3"
+            "divCli4"
+        ;
+    }
 
     .gridFoot {
         display: grid;
@@ -63,6 +91,18 @@
         ;
     }
 
+    .gridClient {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+
+        grid-template-areas:
+            "clientArticle tesimonial"
+            "divCli1 divCli2"
+            "divCli3 divCli4"
+        ;
+    }
 
     .gridFoot {
         display: grid;
@@ -102,4 +142,28 @@
 
 .media {
     grid-area: media;
+}
+
+.clientsArticle {
+    grid-area: clientArticle;
+}
+
+.divClient1 {
+    grid-area: divCli1;
+}
+
+.divClient2 {
+    grid-area: divCli2;
+}
+
+.divClient3 {
+    grid-area: divCli3;
+}
+
+.divClient4 {
+    grid-area: divCli4;
+}
+
+.testimonials {
+    grid-area: tesimonial;
 }
