@@ -33,6 +33,18 @@
         ;
     }
 
+    .gridContact {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+
+        grid-template-areas:
+            "contactEs"
+            "contactDr"
+        ;
+    }
+
     .gridFoot {
         display: grid;
         grid-template-columns: 1fr;
@@ -68,6 +80,17 @@
         ;
     }
 
+    .gridContact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+
+        grid-template-areas:
+            "contactEs contactDr"
+        ;
+    }
+
     .gridFoot {
         display: grid;
         grid-template-columns: 1fr;
@@ -98,11 +121,34 @@
         gap: 10px;
 
         grid-template-areas:
-            "clientArticle tesimonial"
-            "divCli1 divCli2"
-            "divCli3 divCli4"
+            "clientArticle clientArticle tesimonial"
+        ;
+
+        .clientsArticle {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+
+            grid-template-areas:
+                "h1Client h1Client"
+                "divCli1 divCli2"
+                "divCli3 divCli4"
+            ;
+        }
+    }
+
+    .gridContact {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+
+        grid-template-areas:
+            "contactEs contactEs contactDr"
         ;
     }
+
 
     .gridFoot {
         display: grid;
@@ -148,6 +194,13 @@
     grid-area: clientArticle;
 }
 
+.h1Client {
+    grid-area: h1Client;
+    font-family: "Century Gothic";
+    font-size: var(--font-xl);
+    color: var(--primary-color);
+}
+
 .divClient1 {
     grid-area: divCli1;
 }
@@ -158,12 +211,24 @@
 
 .divClient3 {
     grid-area: divCli3;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .divClient4 {
     grid-area: divCli4;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .testimonials {
     grid-area: tesimonial;
+}
+
+.contactEs {
+    grid-area: contactEs;
+}
+
+.contactDr {
+    grid-area: contactDr;
 }

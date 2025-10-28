@@ -1,3 +1,14 @@
+.pic {
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 250px;
+  width: auto;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: var(--heading-color);
+}
+
 :root {
   --orange: #ec8a1b;
   --font-xxl: 2.8125rem;
@@ -71,6 +82,10 @@ html {
   margin: auto;
 }
 
+body {
+  max-width: 1240px;
+  margin: auto;
+}
 body #container {
   max-width: 1500px;
   margin: 0 auto;
@@ -98,14 +113,13 @@ body #container {
   left: 50%;
   margin-left: -25px;
 }
-#theme-switch svg {
-  fill: var(--primary-color);
-}
 #theme-switch .to_dark_mode {
   display: block;
+  height: 32px;
 }
 #theme-switch .to_light_mode {
   display: none;
+  height: 32px;
 }
 
 .darkmode #theme-switch .to_dark_mode {
@@ -177,6 +191,157 @@ h1 span {
   font-size: 16px;
 }
 
+.gridClient {
+  padding: 18px;
+  margin: 8px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  background-color: var(--component-bg);
+  border-radius: 20px;
+}
+
+.clientImg {
+  padding-right: 10px;
+}
+
+.linkWebCli {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--font-secondary-color);
+}
+
+.pClient {
+  width: 85%;
+  color: var(--font-color);
+}
+
+.h1Testi {
+  font-family: "Century Gothic";
+  font-size: var(--font-xl);
+  color: var(--primary-color);
+  padding-top: 12px;
+}
+
+.us {
+  font-family: "Century Gothic";
+  font-size: var(--font-xl);
+  color: var(--font-secondary-color);
+  padding-top: 12px;
+}
+
+.pTesti {
+  font-style: italic;
+  color: var(--font-color);
+  padding-top: 20px;
+  width: 85%;
+}
+
+.blodTesti {
+  font-weight: bold;
+  color: var(--font-secondary-color);
+}
+
+.h1Client::after,
+.h1Testi::after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 2px;
+  background-color: var(--bg-color);
+  margin-top: 10px;
+}
+
+.gridContact {
+  padding: 18px;
+  margin: 8px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  background-color: var(--component-bg);
+  border-radius: 20px;
+  height: 740px;
+}
+
+.inputN {
+  padding-right: 102px;
+}
+
+.inputI {
+  padding-right: 74px;
+}
+
+.inputC {
+  padding-right: 25px;
+}
+
+.inputS {
+  padding-right: 88px;
+}
+
+.inputM {
+  padding-right: 78px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 30px;
+}
+
+.input {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: var(--heading-color);
+  border: 2px solid var(--bg-color);
+}
+
+input.input {
+  width: 375px;
+}
+
+textarea.input {
+  width: 550px;
+  height: 100px;
+}
+
+.contact > label {
+  font-weight: bold;
+}
+
+.contactSub {
+  margin-top: 30px;
+  margin-left: 150px;
+  padding: 8px 25px 8px 25px;
+  border-radius: 20px;
+  border: 2px solid var(--bg-color);
+}
+
+.loremContact {
+  width: 90%;
+  color: var(--font-color);
+}
+
+.ulContact {
+  margin-left: 25px;
+}
+.ulContact li {
+  padding-top: 10px;
+  color: var(--primary-color);
+}
+.ulContact li > span {
+  color: var(--font-color);
+}
+
+.imageF {
+  margin-top: 13px;
+  margin-right: 25px;
+}
+
+.gridFoot::before {
+  content: "";
+  display: block;
+  width: auto;
+  height: 2px;
+  background-color: var(--bg-color);
+  margin-top: 10px;
+}
+
 .imageF {
   width: 30px;
   height: 30px;
@@ -212,6 +377,13 @@ footer {
     gap: 10px;
     grid-template-areas: "clientArticle" "divCli1" "divCli2" "divCli3" "divCli4" "tesimonial";
   }
+  .gridContact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas: "contactEs" "contactDr";
+  }
   .gridFoot {
     display: grid;
     grid-template-columns: 1fr;
@@ -230,6 +402,13 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     grid-template-areas: "clientArticle tesimonial" "divCli1" "divCli2" "divCli3" "divCli4";
+  }
+  .gridContact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas: "contactEs contactDr";
   }
   .gridFoot {
     display: grid;
@@ -250,7 +429,21 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 10px;
-    grid-template-areas: "clientArticle tesimonial" "divCli1 divCli2" "divCli3 divCli4";
+    grid-template-areas: "clientArticle clientArticle tesimonial";
+  }
+  .gridClient .clientsArticle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas: "h1Client h1Client" "divCli1 divCli2" "divCli3 divCli4";
+  }
+  .gridContact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas: "contactEs contactEs contactDr";
   }
   .gridFoot {
     display: grid;
@@ -294,6 +487,13 @@ footer {
   grid-area: clientArticle;
 }
 
+.h1Client {
+  grid-area: h1Client;
+  font-family: "Century Gothic";
+  font-size: var(--font-xl);
+  color: var(--primary-color);
+}
+
 .divClient1 {
   grid-area: divCli1;
 }
@@ -304,14 +504,26 @@ footer {
 
 .divClient3 {
   grid-area: divCli3;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .divClient4 {
   grid-area: divCli4;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .testimonials {
   grid-area: tesimonial;
+}
+
+.contactEs {
+  grid-area: contactEs;
+}
+
+.contactDr {
+  grid-area: contactDr;
 }
 
 header {
@@ -345,7 +557,7 @@ header #infoLogo {
 .info-card .header {
   border-radius: 8px 8px 0 0;
   margin-bottom: 8px;
-  padding: 0.5px;
+  padding: 0.5px 0.5px 0.5px 18px;
   background-color: var(--heading-color);
   font-family: "Century Gothic";
   font-size: var(--font-md);
@@ -467,7 +679,7 @@ header #infoLogo {
   text-decoration: none;
   padding: 1em 2em;
 }
-#navbar li.home {
+#navbar li.actual {
   background-color: var(--primary-color);
 }
 
@@ -497,18 +709,25 @@ header #infoLogo {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menuFooter li {
+  border-right: 1px solid var(--font-color);
+}
+.menuFooter li:last-child {
+  border-right: none;
 }
 .menuFooter a {
   padding: 15px;
   color: var(--font-color);
+  text-decoration: none;
+  padding: 3px 15px;
+  display: block;
 }
 
 .opt {
   text-decoration: none;
-}
-
-.menuFooter a {
-  border-right: 1px solid black;
 }
 
 @media screen and (max-width: 768px) {

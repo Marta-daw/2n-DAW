@@ -1,23 +1,23 @@
 #navbar {
     font-family: 'ArialMT';
     font-size: var(--font-sm);
-    
+
     ul {
         display: flex;
         list-style: none;
     }
-    
+
     li {
         display: flex;
-        
+
         a {
             color: var(--font-color);
             display: flex;
             text-decoration: none;
             padding: 1em 2em;
         }
-        
-        &.home {
+
+        &.actual {
             background-color: var(--primary-color);
         }
     }
@@ -43,24 +43,34 @@
 .menuFooter {
     font-family: 'ArialMT';
     font-size: var(--font-sm);
-    
+
     ul {
         display: flex;
         list-style: none;
+        padding: 0;
+        margin: 0;
     }
-    
+
+    li {
+        border-right: 1px solid var(--font-color);
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+
     a {
         padding: 15px;
         color: var(--font-color);
+
+        text-decoration: none;
+        padding: 3px 15px;
+        display: block;
     }
 }
 
 .opt {
     text-decoration: none;
-}
-
-.menuFooter a {
-    border-right: 1px solid black;
 }
 
 @media screen and (max-width:$breakpoint-small) {
@@ -74,36 +84,36 @@
         border-left: 1px solid var(--bg-color);
         transition: right 300ms ease-in-out;
         background-color: var(--component-bg);
-        
+
         &.show {
             right: 0;
         }
-        
+
         ul {
             width: 100%;
             flex-direction: column;
-            
+
             li {
                 display: block;
-                
+
                 a:hover {
-                        background-color: var(--bg-color);
-                    }
+                    background-color: var(--bg-color);
+                }
             }
         }
     }
-    
+
     #open-sidebar-button {
         display: block;
-        
+
         svg {
             fill: var(--primary-color);
         }
     }
-    
+
     #close-sidebar-button {
         display: block;
-        
+
         svg {
             fill: var(--primary-color);
         }

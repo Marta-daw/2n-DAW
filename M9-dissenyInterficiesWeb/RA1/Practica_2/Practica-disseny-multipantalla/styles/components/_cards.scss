@@ -6,10 +6,11 @@
     padding: 2px;
     background: var(--component-bg);
 
+
     .header {
         border-radius: 8px 8px 0 0;
         margin-bottom: 8px;
-        padding: 0.5px;
+        padding: 0.5px 0.5px 0.5px 18px;
         background-color: var(--heading-color);
         font-family: 'Century Gothic';
         font-size: var(--font-md);
@@ -60,6 +61,3 @@
         }
     }
 }
-
-
-

@@ -1,6 +1,6 @@
 // importar un arxiu reset amb el @forward
 @import 'reset-css-pro';
-
+@use '../abstract/variables' as *;
 /*! 
 https://serp.co/tools/css-reset/
 <link rel="stylesheet" href="https://css.serp.co/css-reset/normalize.css/">
@@ -30,6 +30,7 @@ html {
 
 body {
     margin: 0;
+    max-width: $breakpoint-large;
 }
 
 /**
