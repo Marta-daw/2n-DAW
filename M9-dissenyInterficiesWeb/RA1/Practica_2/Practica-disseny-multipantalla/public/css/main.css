@@ -208,11 +208,15 @@ h1 span {
   text-decoration: none;
   font-weight: bold;
   color: var(--font-secondary-color);
+  font-family: "Century Gothic";
+  font-size: var(--font-xs);
 }
 
 .pClient {
   width: 85%;
   color: var(--font-color);
+  font-family: "ArialMT";
+  font-size: var(--font-xs);
 }
 
 .h1Testi {
@@ -234,11 +238,14 @@ h1 span {
   color: var(--font-color);
   padding-top: 20px;
   width: 85%;
+  font-family: "Century Gothic";
+  font-size: var(--font-xs);
 }
 
 .blodTesti {
-  font-weight: bold;
   color: var(--font-secondary-color);
+  font-family: "ArialMTbold";
+  font-size: var(--font-xs);
 }
 
 .h1Client::after,
@@ -266,11 +273,11 @@ h1 span {
 }
 
 .inputI {
-  padding-right: 74px;
+  padding-right: 78px;
 }
 
 .inputC {
-  padding-right: 25px;
+  padding-right: 35px;
 }
 
 .inputS {
@@ -301,7 +308,8 @@ textarea.input {
 }
 
 .contact > label {
-  font-weight: bold;
+  font-family: "ArialMTbold";
+  font-size: var(--font-sm);
 }
 
 .contactSub {
@@ -310,11 +318,15 @@ textarea.input {
   padding: 8px 25px 8px 25px;
   border-radius: 20px;
   border: 2px solid var(--bg-color);
+  font-family: "ArialMT";
+  font-size: var(--font-xs);
 }
 
 .loremContact {
-  width: 90%;
+  width: 85%;
   color: var(--font-color);
+  font-family: "ArialMT";
+  font-size: var(--font-sm);
 }
 
 .ulContact {
@@ -326,6 +338,8 @@ textarea.input {
 }
 .ulContact li > span {
   color: var(--font-color);
+  font-family: "ArialMT";
+  font-size: var(--font-xs);
 }
 
 .imageF {
@@ -356,8 +370,8 @@ footer {
           justify-content: space-between;
   padding: 10px;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
+  font-family: "ArialMT";
+  font-size: var(--font-xs);
 }
 
 .copyright span {
@@ -540,7 +554,7 @@ header {
 header #infoLogo {
   font-family: "Century Gothic";
   font-size: 50px;
-  margin-left: 10px;
+  margin: 25px 0 25px 17px;
 }
 
 .info-card {
@@ -626,6 +640,9 @@ header #infoLogo {
   float: right;
   font-family: "ArialMT";
   font-size: var(--font-xs);
+  padding: 2px 15px 2px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--colorD8);
 }
 
 .subs {
@@ -678,6 +695,8 @@ header #infoLogo {
   display: flex;
   text-decoration: none;
   padding: 1em 2em;
+  font-family: "Century Gothic";
+  font-size: var(--font-xs);
 }
 #navbar li.actual {
   background-color: var(--primary-color);
@@ -728,6 +747,8 @@ header #infoLogo {
 
 .opt {
   text-decoration: none;
+  font-family: "ArialMT";
+  font-size: var(--font-xs);
 }
 
 @media screen and (max-width: 768px) {

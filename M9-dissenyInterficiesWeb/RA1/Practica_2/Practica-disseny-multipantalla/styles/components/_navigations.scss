@@ -15,6 +15,9 @@
             display: flex;
             text-decoration: none;
             padding: 1em 2em;
+
+            font-family: "Century Gothic";
+            font-size: var(--font-xs);
         }
 
         &.actual {
@@ -71,6 +74,8 @@
 
 .opt {
     text-decoration: none;
+    font-family: "ArialMT";
+    font-size: var(--font-xs);
 }
 
 @media screen and (max-width:$breakpoint-small) {
