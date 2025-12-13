@@ -80,7 +80,7 @@ function restaFechas(f1, f2) {
     return dias;
 }
 
-console.log(restaFechas(dia1, day));
+console.log(restaFechas(dia1, day) + " dies");
 
 //13. Crea un script que retorni la data actual amb el següent format
 // 17/6/2022, 8:43:49
