@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* 1. Donada una llista de colors recorre-la per:
+- Crea una nova llista amb els seus complementaris
+- Aplica el segon color de la llista a una classe */
+.color-segon {
+  background-color: blue;
+}
+
+/* 2. Crea un mixin amb tots els paràmetres per a crear ombres box-shadow i aplica'l a una classe. */
+.ombraEx {
+  box-shadow: 10px 15px #888888;
+}
+
+/* 3. Modifica el mixin del punt anterior perquè:
+El color de shadow sigui per defecte gris en format RGB
+El valor d'opacity sigui per defecte 0.5 */
+.exOmbra {
+  box-shadow: 10px 15px rgba(136, 136, 136, 0.5);
+}
+
+/* 4. Crea un mixin que generi un gradient lineal entre dos colors i un angle donat
+Utilitza una llista de colors com a color inicial
+Per a color final utilitza el priner color amb la lluminositat ajustada al 20% mittjantçant la
+funció color.adjust().
+L'angle que s'aplica al gradient per a cada classe és l'índex de la llista de colors multiplicat per
+l'angle passat com a paràmetre, per exemple 145º, 245º...
+Com a sufix de la classe generada per a cada color, utilitza l'índex de la llista de colors que has
+de recórrer amb @each i la funció list.index(). */
+.gradient-1 {
+  background: linear-gradient(45deg, red, #ff6666);
+}
+
+.gradient-2 {
+  background: linear-gradient(90deg, blue, #6666ff);
+}
+
+.gradient-3 {
+  background: linear-gradient(135deg, green, #00e600);
+}
+
+.gradient-4 {
+  background: linear-gradient(180deg, yellow, #ffff66);
+}
+
+.gradient-5 {
+  background: linear-gradient(225deg, orange, #ffc966);
+}
+
+/* 5. A partir d'aquest map crea'n un altre amb els valors incrementats amb 0.4rem i fusiona'ls
+$font-weights: ("regular": 1rem, "medium": 1.5rem, "large": 2rem); */
+
+/* 6. Crea un mixin que a partir d'un map.*/
+.op-0 {
+  opacity: 0;
+}
+
+.op-25 {
+  opacity: 0.25;
+}
+
+.op-50 {
+  opacity: 0.5;
+}
+
+.op-75 {
+  opacity: 0.75;
+}
+
+.op-100 {
+  opacity: 1;
+}
+
+/* 7. Crea una funció que se li passi com a paràmetres un color, el percentatge (per aclarir un número
+negatiu, per enfosquir positiu) i el límit de percentatge a aplicar, per defecte 90 que és el valor
+màxim.
+El percentatge va des de -limit a +limit
+Si es passa un percentatge fora del rang anterior s'agafa el límit, ex. -100 -> -90; 120 -> 90
+La funció retorna un color que es pot aplicar a propietats css */
+/* 8. Crea una funcio que retorni un map que contingui una escala de colors. Paràmetres: color, interval i
+límit de percentatge. Utilitza la funció del punt anterior. */
+/* 9. Crea un mixin per generar classes a partir del map generat en el punt anterior,
+i la propietat passada com a paràmetre.
+Classes generades per al color orange:
+.orange-60 {background-color: #ffdb99;}
+.orange-45 {background-color: #ffce73; }
+.orange-30 {background-color: #ffc04d; }
+.orange-15 {background-color: #ffb326; }
+.orange {background-color: orange; }
+.orange15 {background-color: #d98c00; }
+.orange30 {background-color: #b37400; }
+.orange45 {background-color: #8c5b00; }
+.orange60 {background-color: #664200; } */
+.orange-90 {
+  background-color: rgb(255, 246, 229.5);
+}
+
+.orange-75 {
+  background-color: rgb(255, 232.5, 191.25);
+}
+
+.orange-60 {
+  background-color: #ffdb99;
+}
+
+.orange-45 {
+  background-color: rgb(255, 205.5, 114.75);
+}
+
+.orange-30 {
+  background-color: rgb(255, 192, 76.5);
+}
+
+.orange-15 {
+  background-color: rgb(255, 178.5, 38.25);
+}
+
+.orange0 {
+  background-color: orange;
+}
+
+.orange15 {
+  background-color: rgb(216.75, 140.25, 0);
+}
+
+.orange30 {
+  background-color: rgb(178.5, 115.5, 0);
+}
+
+.orange45 {
+  background-color: rgb(140.25, 90.75, 0);
+}
+
+.orange60 {
+  background-color: #664200;
+}
+
+.orange75 {
+  background-color: rgb(63.75, 41.25, 0);
+}
+
+.orange90 {
+  background-color: rgb(25.5, 16.5, 0);
+}
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,236 @@
+@use "sass:meta";
+@use "sass:string";
+@use "sass:math";
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+
+/* 1. Donada una llista de colors recorre-la per:
+- Crea una nova llista amb els seus complementaris
+- Aplica el segon color de la llista a una classe */
+
+$colors: (
+    red,
+    blue,
+    green,
+    yellow,
+    orange
+);
+
+$llistaComplementaris: (
+);
+
+@each $color in $colors {
+    $complementari: color.complement($color);
+    $llistaComplementaris: list.append($llistaComplementaris, $complementari);
+}
+
+.color-segon {
+    background-color: list.nth($colors, 2);
+}
+
+@debug $llistaComplementaris;
+
+/* 2. Crea un mixin amb tots els paràmetres per a crear ombres box-shadow i aplica'l a una classe. */
+@mixin exemple-boxShadow {
+    box-shadow: 10px 15px #888888;
+}
+
+.ombraEx {
+    @include exemple-boxShadow;
+}
+
+@debug "Mixina box-shadow aplicada a la classe ombraEx";
+
+/* 3. Modifica el mixin del punt anterior perquè:
+El color de shadow sigui per defecte gris en format RGB
+El valor d'opacity sigui per defecte 0.5 */
+@mixin exemple-boxShadow2 {
+    box-shadow: 10px 15px rgba(136, 136, 136, 0.5);
+}
+
+.exOmbra {
+    @include exemple-boxShadow2;
+}
+
+@debug "Mixina box-shadow2 aplicada a la classe exOmbra";
+
+/* 4. Crea un mixin que generi un gradient lineal entre dos colors i un angle donat
+Utilitza una llista de colors com a color inicial
+Per a color final utilitza el priner color amb la lluminositat ajustada al 20% mittjantçant la
+funció color.adjust().
+L'angle que s'aplica al gradient per a cada classe és l'índex de la llista de colors multiplicat per
+l'angle passat com a paràmetre, per exemple 145º, 245º...
+Com a sufix de la classe generada per a cada color, utilitza l'índex de la llista de colors que has
+de recórrer amb @each i la funció list.index(). */
+@mixin gradient-lista($colors, $angle) {
+    @each $color in $colors {
+        $index: list.index($colors, $color);
+        $adjusted-color: color.adjust($color, $lightness: 20%);
+
+        .gradient-#{$index} {
+            background: linear-gradient($index * $angle, $color, $adjusted-color);
+        }
+    }
+}
+
+@include gradient-lista($colors, 45deg);
+
+@debug "Mixina gradient-lista aplicada a les classes gradient-1, gradient-2, etc.";
+
+/* 5. A partir d'aquest map crea'n un altre amb els valors incrementats amb 0.4rem i fusiona'ls
+$font-weights: ("regular": 1rem, "medium": 1.5rem, "large": 2rem); */
+$font-weights: (
+    "regular": 1rem,
+    "medium": 1.5rem,
+    "large": 2rem
+);
+
+$nouMap: (
+);
+
+@each $clau, $valor in $font-weights {
+    $nou-valor: $valor + 0.4rem;
+
+    $nouMap: map.merge($nouMap , ($clau: $nou-valor));
+
+    $mapFusionat: map.merge($font-weights, $nouMap);
+}
+
+@debug $nouMap;
+/* 6. Crea un mixin que a partir d'un map.*/
+$opacity : (property: opacity,
+    class: op,
+    values: ("0": 0,
+        "25": 0.25,
+        "50": 0.5,
+        "75": 0.75,
+        "100": 1,
+    ));
+
+@mixin opac-class($map) {
+    @if $map {
+        @each $key, $value in map.get($map, values) {
+            .#{map.get($map, class)}-#{$key} {
+                #{map.get($map, property)}: #{$value};
+            }
+
+            @debug "Classe .#{map.get($map, class)}-#{$key} generada amb #{map.get($map, property)}: #{$value}";
+        }
+    }
+}
+
+@include opac-class($opacity);
+
+$font-size : (property: font-size,
+    class: fs,
+    unit: rem,
+    values: ('xs': 0.4,
+        'md': 0.625,
+        'lg': 1.2,
+        'xl': 1.8,
+        'xxl': 2.5,
+    ));
+
+@mixin fontSize-class($map) {
+    @if $map {
+        @each $clau, $valor in map.get($map, values) {
+            .#{map.get($map, class)}-#{$key} {
+                #{map.get($map, property)}: #{$valor}
+            }
+
+            @debug "Classe .#{map.get($map, class)}-#{$key} generada amb #{map.get($map, property)}: #{$valor}#{map.get($map, unit)}";
+        }
+    }
+}
+
+/* 7. Crea una funció que se li passi com a paràmetres un color, el percentatge (per aclarir un número
+negatiu, per enfosquir positiu) i el límit de percentatge a aplicar, per defecte 90 que és el valor
+màxim.
+El percentatge va des de -limit a +limit
+Si es passa un percentatge fora del rang anterior s'agafa el límit, ex. -100 -> -90; 120 -> 90
+La funció retorna un color que es pot aplicar a propietats css */
+
+@function escalaColor ($color, $percentatge: 0, $limit: 90) {
+    @if math.abs($limit)>90 {
+        $limit: 90
+    }
+
+    ;
+
+    $lightLimit: math.abs($limit)*-1;
+    $darkLimit: math.abs($limit);
+
+    @if $percentatge < $lightLimit {
+        $percentatge: $lightLimit
+    }
+
+    ;
+
+
+    @if $percentatge >$darkLimit {
+        $percentatge: $darkLimit
+    }
+
+    ;
+
+    @if $percentatge >0 {
+        @return color.mix(black, $color, $percentatge * 1%);
+    }
+
+    @else {
+        @return color.mix(white, $color, math.abs($percentatge) * 1%);
+    }
+}
+
+@debug escalaColor(orange);
+
+/* 8. Crea una funcio que retorni un map que contingui una escala de colors. Paràmetres: color, interval i
+límit de percentatge. Utilitza la funció del punt anterior. */
+@function generaEscala ($color, $offset, $limit: 90) {
+    $escala: (
+    );
+
+$i: -$limit;
+
+@while $i <=$limit {
+    $percentatge: $i;
+    $colorEscalat: escalaColor($color, $percentatge, $limit);
+    $escala: map.merge($escala, ("Clau-#{$percentatge}": $colorEscalat));
+
+    $i: $i + $offset;
+}
+
+@return $escala;
+}
+
+$resultat: generaEscala(orange, 15);
+
+@debug $resultat;
+
+/* 9. Crea un mixin per generar classes a partir del map generat en el punt anterior,
+i la propietat passada com a paràmetre.
+Classes generades per al color orange:
+.orange-60 {background-color: #ffdb99;}
+.orange-45 {background-color: #ffce73; }
+.orange-30 {background-color: #ffc04d; }
+.orange-15 {background-color: #ffb326; }
+.orange {background-color: orange; }
+.orange15 {background-color: #d98c00; }
+.orange30 {background-color: #b37400; }
+.orange45 {background-color: #8c5b00; }
+.orange60 {background-color: #664200; } */
+
+@mixin crearClasses ($map, $propiedad) {
+    @each $clau, $valor in $map {
+        $clauNet: string.slice($clau, 6);
+
+        .orange#{$clauNet} {
+            #{$propiedad}: #{$valor};
+        }
+
+        @debug "Classe .orange#{$clauNet} generada amb #{$propiedad}: #{$valor}";
+    }
+}
+
+@include crearClasses($resultat, background-color);

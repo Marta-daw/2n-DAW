@@ -1,0 +1,60 @@
+// style.scss
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../public/lib/bootstrap/scss/functions";
+@import "../public/lib/bootstrap/scss/variables";
+@import "../public/lib/bootstrap/scss/maps";
+@import "../public/lib/bootstrap/scss/mixins";
+@import "../public/lib/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../public/lib/bootstrap/scss/root";
+@import "../public/lib/bootstrap/scss/reboot";
+@import "../public/lib/bootstrap/scss/type";
+@import "../public/lib/bootstrap/scss/images";
+@import "../public/lib/bootstrap/scss/containers";
+@import "../public/lib/bootstrap/scss/grid";
+@import "../public/lib/bootstrap/scss/tables";
+@import "../public/lib/bootstrap/scss/forms";
+@import "../public/lib/bootstrap/scss/buttons";
+@import "../public/lib/bootstrap/scss/transitions";
+@import "../public/lib/bootstrap/scss/dropdown";
+@import "../public/lib/bootstrap/scss/button-group";
+@import "../public/lib/bootstrap/scss/nav";
+@import "../public/lib/bootstrap/scss/navbar";
+@import "../public/lib/bootstrap/scss/card";
+@import "../public/lib/bootstrap/scss/accordion";
+@import "../public/lib/bootstrap/scss/breadcrumb";
+@import "../public/lib/bootstrap/scss/pagination";
+@import "../public/lib/bootstrap/scss/badge";
+@import "../public/lib/bootstrap/scss/alert";
+@import "../public/lib/bootstrap/scss/progress";
+@import "../public/lib/bootstrap/scss/list-group";
+@import "../public/lib/bootstrap/scss/close";
+@import "../public/lib/bootstrap/scss/toasts";
+@import "../public/lib/bootstrap/scss/modal";
+@import "../public/lib/bootstrap/scss/tooltip";
+@import "../public/lib/bootstrap/scss/popover";
+@import "../public/lib/bootstrap/scss/carousel";
+@import "../public/lib/bootstrap/scss/spinners";
+@import "../public/lib/bootstrap/scss/offcanvas";
+@import "../public/lib/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../public/lib/bootstrap/scss/helpers";
+
+// Utilities
+@import "../public/lib/bootstrap/scss/utilities/api";
+//@import "../public/lib/bootstrap/scss/bootstrap";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+
+
+// 6. Optionally include any other parts as needed
+
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+
+// 8. Add additional custom code here
