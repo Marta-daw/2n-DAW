@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Django</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+
+    <h1 class="titol">Calculadora Simple</h1>
+
+    <div class="calculator">
+        <form method="post" action="{% url 'calculator' %}">
+            {% csrf_token %}
+            <!-- Inputs ocults per enviar al backend -->
+            <input type="hidden" name="num1" id="num1">
+            <input type="hidden" name="num2" id="num2">
+            <input type="hidden" name="operation" id="operation">
+
+            <!-- Pantalla -->
+            <div class="display">
+                <input type="text" id="screen" readonly>
+            </div>
+
+            <div class="buttons">
+                <button type="button" onclick="pressNumber('7')">7</button>
+                <button type="button" onclick="pressNumber('8')">8</button>
+                <button type="button" onclick="pressNumber('9')">9</button>
+                <button type="button" class="operator" onclick="setOperation('divide')">/</button>
+                <button type="button" onclick="pressNumber('4')">4</button>
+                <button type="button" onclick="pressNumber('5')">5</button>
+                <button type="button" onclick="pressNumber('6')">6</button>
+                <button type="button" class="operator" onclick="setOperation('multiply')">*</button>
+                <button type="button" onclick="pressNumber('1')">1</button>
+                <button type="button" onclick="pressNumber('2')">2</button>
+                <button type="button" onclick="pressNumber('3')">3</button>
+                <button type="button" class="operator" onclick="setOperation('subtract')">-</button>
+                <button type="button" class="clear" onclick="clearAll()">C</button>
+                <button type="button" onclick="pressNumber('0')">0</button>
+                <button type="button" class="point" onclick="pressNumber('.')">.</button>
+                <button type="button" class="operator" onclick="setOperation('add')">+</button>
+                <button type="submit" class="equal">=</button>
+            </div>
+        </form>
+
+        <!-- {% if result %}
+        <div class="result-text">Resultat: {{ result }}</div>
+        {% endif %}
+        {% if error %}
+        <div class="result-text" style="color:red;">Error: {{ error }}</div>
+        {% endif %} -->
+    </div>
+
+
+    <script>
+        let num1 = "";
+        let num2 = "";
+        let operation = "";
+        let expression = "";
+
+        function pressNumber(num) {
+            if (!operation) {
+                num1 += num;
+            } else {
+                num2 += num;
+            }
+
+            expression += num;
+            updateScreen();
+        }
+
+        function setOperation(op) {
+            if (!num1) return; // no deixem posar operació sense primer número
+
+            operation = op;
+
+            const symbolMap = {
+                "add": "+",
+                "subtract": "-",
+                "multiply": "*",
+                "divide": "/"
+            };
+
+            expression += symbolMap[op];
+            updateScreen();
+        }
+
+        function updateScreen() {
+            document.getElementById("screen").value = expression;
+
+            // Actualitzar inputs ocults perquè el backend els rebi
+            document.getElementById("num1").value = num1;
+            document.getElementById("num2").value = num2;
+            document.getElementById("operation").value = operation;
+        }
+
+        function clearAll() {
+            num1 = "";
+            num2 = "";
+            operation = "";
+            expression = "";
+            updateScreen();
+        }
+
+        document.getElementById("screen").value = "{{ result }}";
+    </script>
+
+</body>
+
+</html>

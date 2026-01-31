@@ -1,0 +1,5 @@
+$custom-colors: (
+    "colorSearch": #e0c10d
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);

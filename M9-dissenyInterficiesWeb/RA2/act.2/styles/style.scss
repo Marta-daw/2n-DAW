@@ -1,8 +1,16 @@
 // style.scss
+$enable-rounded: false;
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../public/lib/bootstrap/scss/functions";
+
+@import "./abstract/variables";
+
 @import "../public/lib/bootstrap/scss/variables";
+
+//Importo els meus colors
+@import "./themes/theme_colors";
+
 @import "../public/lib/bootstrap/scss/maps";
 @import "../public/lib/bootstrap/scss/mixins";
 @import "../public/lib/bootstrap/scss/utilities";

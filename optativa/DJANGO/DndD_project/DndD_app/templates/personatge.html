@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personatge</title>
+    <link rel="stylesheet" href="{% static 'DndD_app/style.css' %}">
+</head>
+
+<body>
+    <div class="personatge">
+        <section class="header">
+            <img src="{% static 'DndD_app/juego-de-rol.png' %}" alt="Dungeons and Dragons Logo" class="logo">
+        </section>
+        <h1>Fitxa del Personatge {{ nom }}</h1>
+
+        <section class="cos">
+            <p><strong>Raça</strong> - {{ raca }}</p>
+            <p><strong>Classe</strong> - {{ classe }}</p>
+            <p><strong>Nivell</strong> - {{ nivell }}</p>
+        </section>
+
+        {% if nivell >= 5 %}
+        <p class="legend"><strong>El teu personatge és legendari!</strong></p>
+        {% endif %}
+
+        <h2>Característiques</h2>
+        <div class="stats-container">
+            <div>FOR: {{ stats.FOR }}</div>
+            <div>DES: {{ stats.DES }}</div>
+            <div>CON: {{ stats.CON }}</div>
+            <div>INT: {{ stats.INT }}</div>
+            <div>SAB: {{ stats.SAB }}</div>
+            <div>CAR: {{ stats.CAR}}</div>
+        </div>
+
+        <h2>Habilitats</h2>
+        {% if habilitats %}
+        <ul>
+            {% for hab in habilitats %}
+            <li>{{ hab }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No té cap habilitats.</p>
+        {% endif %}
+
+        <h2>Equipament</h2>
+        {% if equipament %}
+        <ul>
+            {% for eq in equipament %}
+            <li>{{ eq }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No té cap equipament.</p>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>

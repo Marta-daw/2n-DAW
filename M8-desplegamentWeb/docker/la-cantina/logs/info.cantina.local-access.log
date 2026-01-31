@@ -1,0 +1,6 @@
+172.17.0.1 - - [27/Jan/2026:18:09:41 +0000] "GET / HTTP/1.1" 200 1433 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0"
+172.17.0.1 - - [27/Jan/2026:18:09:41 +0000] "GET /favicon.ico HTTP/1.1" 404 236 "http://info.cantina.local/" "Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0"
+172.17.0.1 - - [27/Jan/2026:18:11:37 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0"
+172.17.0.1 - - [28/Jan/2026:15:53:15 +0000] "GET / HTTP/1.1" 200 1433 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0"
+172.17.0.1 - - [28/Jan/2026:15:53:15 +0000] "GET /favicon.ico HTTP/1.1" 404 236 "http://info.cantina.local/" "Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0"
+127.0.0.1 - - [30/Jan/2026:16:36:50 +0000] "HEAD / HTTP/1.1" 200 - "-" "curl/8.14.1"
