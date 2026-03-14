@@ -1,0 +1,53 @@
+.cartDrawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100vh;
+    background: var(--color-white);
+    box-shadow: -4px 0 12px var(--color-black);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-xlarge);
+    overflow-y: auto;
+}
+
+.cartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--padding-xlarge);
+}
+
+.cartHeader h2 {
+    margin: 0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: var(--padding-xlarge);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.closeButton:hover {
+    color: var(--color-danger);
+}
+
+.buttonDeleteItem {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.buttonDeleteItem:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    border: none;
+}
+
+.buyButton:hover {
+    background-color: var(--color-primary-dark);
+}

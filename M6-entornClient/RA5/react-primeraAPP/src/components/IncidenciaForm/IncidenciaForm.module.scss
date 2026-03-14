@@ -1,0 +1,55 @@
+.incidenciaContainer {
+    padding: 20px;
+
+    max-width: 950px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.titleACT {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #000000;
+}
+
+.incidenciaForm {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #000000;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.label {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.inputTextASelect {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.btnForm {
+    background-color: #726f6f;
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.resposta {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}

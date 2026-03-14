@@ -1,0 +1,43 @@
+PRIMER
+- creem carpeta HTMLElements per a diferents parts de, per exemple, la card (button, image, input, label, option, select...) i així poder posar els estils bàsics de cada element i al fitxer d'estils del donutCard posar els especifics per a personalitzar cada element.
+
+- Crear carpeta styles del patró7.1 simplificat per a afegir els fitxers scss que necessiti, això per mantenir els fitxers index.scss i app.scss.
+
+- Exemple de Input.jsx (exemple per així poder fer la resta)
+import styles from '(la ruta destils)'
+
+export const Input = ({ className = '', ...props}) => {
+    //Combinem l'estil base del Design System amb els que ens arribi del prop
+
+    const inputClasses = `${styles.baseInput} {$className}`
+
+    return(
+        <input className={inputClasses} {...props} />    
+    );
+};
+
+- Exemple del Select.jsx
+import styles from '(ruta dels estils)'
+
+const Select = ({childre, className = '', ...props}) => {
+    //Combinem l'estil base del Design System amb els que ens arribi del prop
+    const selectClasses = `${styles.baseInput} {$className}`;
+
+    return (
+        <select className = {selectClasses}{...props)>
+            {children}
+        </select>
+    );
+};
+
+DINS LA CARPETA DE HTMLELEMENTS PODEM AFEGIR UN INDEX.JSX PER EXPORTAR TOTS ELS ELEMENTS DE COP I IMPORTAR-HO import { Label, Button, ......} from 'ruta del fitxer' (Això es pot fer aixi perque a l'hora de fer els exports de cada component és un export normal, NO un export default)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SEGON
+Utilitzar els components al donutCard de la següent manera
+<Image></Image>
+<Label></Label>
+<Input></Input>
+<Select></Select>
+
+I així poser el contingut que calgui a dins l'etiqueta o entre la de obertura i tancament

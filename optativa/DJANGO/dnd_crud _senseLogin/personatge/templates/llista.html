@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llistat dels personatges</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="bodyListPerson">
+    <h1 class="h1ListPerson">Llista de personatges</h1>
+
+    <ul class="tableList">
+        {% for pers in personatges %}
+        <li>
+            <h3 class="h3Nom">{{ pers.nom }} </h3>
+            <div class="divBtn">
+                <p><a href="{% url 'editar' pers.id %}" class="btnEd">Editar</a></p>
+                <p><a href="{% url 'eliminar' pers.id %}" class="btnDel">Eliminar</a></p>
+            </div>
+            
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'crear' %}" class="btnCreate">Crear personatge</a>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.bodyApp {
+    font-family: var(--font-sans);
+    font-size: 25px;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    padding-left: 20px;
+}
+
+.titleGestio {
+    font-size: 30px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.containerTasques,
+.containerShow,
+.containerEdit,
+.containerCreate {
+    margin: 20px auto;
+    padding: 0 0 0 15px;
+}
+
+.headerGestio {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.llistaTasques {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.link,
+.btnTornar,
+.btnActualitza,
+.btnSave {
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.linkIndex {
+    margin-left: 10px;
+    color: #004fa3;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

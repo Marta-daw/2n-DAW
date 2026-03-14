@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tutorial Laravel - Verificació del Reproductor</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="tag">Verificació del Reproductor</div>
+            <h1>Tutorial Laravel</h1>
+            <p class="subtitle">Creació d'un projecte amb Laravel · Prova d'accessibilitat per teclat</p>
+        </header>
+
+        <!-- VÍDEO RESPONSIVE amb iframe -->
+        <div class="videoSection">
+            <iframe src="https://www.youtube.com/embed/baxgCLhnq6A" title="Tutorial: Creació d'un projecte amb Laravel"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen tabindex="0">
+            </iframe>
+        </div>
+
+        <!-- INSTRUCCIONS ACCESSIBILITAT -->
+        <div class="accessPanel">
+            <h2>Prova d'accessibilitat — Control per teclat</h2>
+            <div class="keyGrid">
+                <div class="item">
+                    <kbd>Tab</kbd>
+                    <span class="descrip">Arribar al reproductor des de la pàgina</span>
+                </div>
+                <div class="item">
+                    <kbd>Espai</kbd>
+                    <span class="descrip">Pausar / Reproduir el vídeo</span>
+                </div>
+                <div class="item">
+                    <kbd>←</kbd>
+                    <span class="descrip">Retrocedir 5 segons</span>
+                </div>
+                <div class="item">
+                    <kbd>→</kbd>
+                    <span class="descrip">Avançar 5 segons</span>
+                </div>
+                <div class="item">
+                    <kbd>↑</kbd>
+                    <span class="descrip">Pujar el volum</span>
+                </div>
+                <div class="item">
+                    <kbd>↓</kbd>
+                    <span class="descrip">Baixar el volum</span>
+                </div>
+                <div class="item">
+                    <kbd>F</kbd>
+                    <span class="descrip">Pantalla completa</span>
+                </div>
+                <div class="item">
+                    <kbd>C</kbd>
+                    <span class="descrip">Activar / Desactivar subtítols (CC)</span>
+                </div>
+                <div class="item">
+                    <kbd>M</kbd>
+                    <span class="descrip">Silenciar / Dessilenciar</span>
+                </div>
+                <div class="item">
+                    <kbd>K</kbd>
+                    <span class="descrip">Pausar / Reproduir (alternatiu)</span>
+                </div>
+            </div>
+
+
+        </div>
+        <p class="ferProva">
+            <strong class="strongT">Com fer la prova:</strong> Fes clic una vegada al vídeo per posar-lo en focus,
+            després deixa el ratolí i utilitza únicament el teclat. Comprova que pots controlar
+            la reproducció, el volum i els subtítols <strong class="strongT">sense tocar el ratolí</strong>.
+        </p>
+    </div>
+</body>
+
+</html>

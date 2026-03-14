@@ -1,0 +1,14 @@
+.divIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.cartButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}

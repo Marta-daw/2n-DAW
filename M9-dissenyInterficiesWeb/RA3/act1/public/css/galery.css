@@ -1,0 +1,104 @@
+.bodyGallery {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+
+    text-align: justify;
+}
+
+.btnToIndex {
+    background-color: #89cadc;
+    padding: 10px;
+    border: 2px solid #0c69a2;
+    margin: 15px 0;
+    font-size: 24px;
+
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+
+    & a:hover {
+        font-weight: bold;
+    }
+}
+
+.h1Title {
+    background-color: #89cadc;
+    padding: 8px 18px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 15px auto;
+}
+
+.titleAct {
+    border: 2px solid #0c69a2;
+    padding: 5px 10px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 15px auto;
+}
+
+.spanBold {
+    font-weight: bold;
+}
+
+.expAct3,
+.expAct4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.gallery {
+    display: grid;
+    gap: 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+}
+
+/* Smartphone: 1 columna */
+@media (max-width: 764px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet: 2 columnes */
+@media (min-width: 765px) and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* PC: 3 columnes */
+@media (min-width: 1025px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+
+    /* Estils utilitzats per provar el lazy loading
+    width: 100%;
+    height: 500px;
+    object-fit: cover; */
+}
+
+.tableScroll th,
+td {
+    width: 100%;
+    border: 2px solid #0c69a2;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.imgScroll {
+    max-width: 750px;
+}

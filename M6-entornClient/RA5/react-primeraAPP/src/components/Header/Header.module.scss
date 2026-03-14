@@ -1,0 +1,12 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-text);
+}
+
+.textHeader {
+    font-size: var(--font-size-large);
+}

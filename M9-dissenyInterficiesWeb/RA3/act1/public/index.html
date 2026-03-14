@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Contingut web optimitzat. Imatges</title>
+</head>
+
+<body class="bodyOptim">
+    <button class="btnToGallery"><a href="./galeria.html">Anar a la Galeria</a></button>
+
+    <h1 class="h1Title">Optimització d'imatges i video</h1>
+    <h2 class="titleAct">Activitat 1 - Optimització imatges</h2>
+    <div class="divInfoMetadades">
+        <p class="enunciatMetadades">ENUNCIAT -> Investiga si Squoosh (EN AQUEST CAS) ha eliminat les metadades i quin
+            impacte té això en el pes de la imatge.</p>
+        <p>Per defecte, Squoosh no està dissenyada per visualitzar ni conservar les metedades de les imatges. L'eina
+            elimina les metadades per optimitzar i reduir el pes de l'arxiu, centrant-se en la compressió i conversió de
+            formats.</p>
+        <p>Eliminar les metadades té un impacte entre lleuger i moderat en el pes de la imatge, podent-se reduir entre
+            uns pocs kilobytes (KB) i un parell de megabytes (MB) en arxius molt carregats. Aquesta acció no afecta la
+            qualitat visual, però optimitza l'arxiu per a la web en eliminar informació innecessària.</p>
+    </div>
+
+    <table class="tableOptimIMG">
+        <thead>
+            <tr>
+                <th>Imatge Original</th>
+                <th>Imatge Optimitzada</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="./media/flower.jpg" alt="Original"></td>
+                <td><img src="./media/flowerOptim.webp" alt="Optimized"></td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Mida de l'arxiu: 75,3 kB </li>
+                        <li>Percentatge de reducció: 0</li>
+                        <li>Eina utilitzada: cap</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Mida de l'arxiu: 29,7 kB</li>
+                        <li>Percentatge de reducció: 60%</li>
+                        <li>Eina utilitzada: Squoosh.app / Tipus de compressió: Lossy</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="divCapturesSquoosh">
+        <img src="./media/flowerPreOptimitzar.png" alt="Pre Optimized" class="imgSquoosh" />
+        <img src="./media/flowerOptimSquoosh.png" alt="Optimized Squoosh" />
+    </div>
+
+    <h2 class="titleAct">Activitat 2 - Optimització de GIFs</h2>
+    <p class="spanBold">Eina utiltizada <span>cloudconvert.com</span></p>
+
+    <table class="tableGif">
+        <thead>
+            <tr>
+                <th>
+                    <h3>GIF original</h3>
+                </th>
+                <th>
+                    <h3>GIF en format &lt;video&gt;</h3>
+                </th>
+                <th>
+                    <h3>GIF en format &lt;imatge&gt;</h3>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="banana.gif" alt="original Gif" /></td>
+                <td>
+                    <video autoplay loop muted playsinline width="400">
+                        <source src="./media/banana.webm" type="video/webm">
+                        <source src="./media/banana.mp4" type="video/mp4">
+                        El teu navegador no suporta el format de vídeo.
+                    </video>
+                    <p>Atributs: autoplay, loop, muted, playsinline</p>
+                </td>
+                <td>
+                    <picture>
+                        <source srcset="./media/banana.avif" type="image/avif">
+                        <source srcset="./media/banana.webp" type="image/webp">
+                        <img src="./media/banana.gif" alt="Banana GIF">
+                    </picture>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Arxiu en format GIF</li>
+                        <li>Mida de l'arxiu: 73,6 KB</li>
+                        <li>Percentatge de reducció: 0</li>
+                        <li>Eina utilitzada: cap</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Arxius en format &lt;video&gt; (webm i mp4)</li>
+                        <li>Mida de l'arxiu: <br />webm - 47,9kb || MP4 - 28,9 KB</li>
+                        <li>Percentatge de reducció: <br />webm - 34,92% || MP4 - 60,73%</li>
+                        <li>Eina utilitzada: cloudconvert.com <br /> Tipus de compressió: Lossy</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Arxiu en format &lt;imatge&gt; (avif i webp)</li>
+                        <li>Mida de l'arxiu: <br />avif - 5,5 KB || webp - 8,3 KB</li>
+                        <li>Percentatge de reducció: <br /> avif - 92,53% || webp - 88,72%</li>
+                        <li>Eina utilitzada: cloudconvert.com <br />Tipus de compressió: Lossy</li>
+                    </ul>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>

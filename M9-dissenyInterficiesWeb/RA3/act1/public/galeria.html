@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/galery.css">
+    <title>Galeria</title>
+</head>
+
+<body class="bodyGallery">
+    <button class="btnToIndex"><a href="./index.html">Anar a l'index</a></button>
+    <h1 class="h1Title">Optimització d'imatges i videos</h1>
+    <h2 class="titleAct">Activitat 3 - Galeria responsive amb Cloudinary</h2>
+    <h3> ENUNCIAT -> Resum de les funcionalitats de Cloudinary i investiga les opcions f_auto i q_auto</h3>
+    <p class="expAct3"> <span class="spanBold">Cloudinary</span> és un servei en el núvol per gestionar imatges web.
+        Permet emmagatzemar imatges il·limitades, manipular-les dinàmicament (redimensionar, retallar, aplicar
+        efectes)
+        i optimitzar-les automàticament. L'avantatge clau és que les transformacions es fan modificant paràmetres a
+        la
+        URL sense crear versions manuals.
+    </p>
+    <p class="expAct3"> <span class="spanBold">f_auto (Format Automàtic)</span> Selecciona automàticament el millor
+        format d'imatge segons el navegador: WebP/AVIF per navegadors moderns, JPEG/PNG per navegadors antics. Això
+        redueix el pes sense perdre qualitat, ja que cada navegador rep el format més eficient que pot interpretar.
+    </p>
+    <p class="expAct3"> <span class="spanBold">q_auto (Qualitat Automàtica)</span> Ajusta la qualitat de compressió
+        automàticament per equilibrar mida i qualitat visual. Té nivells: best (màxima qualitat), good (equilibri
+        òptim,
+        per defecte), eco (més compressió) i low (miniatures). Redueix el pes mantenint la qualitat visual adequada
+        per
+        cada imatge.</p>
+    <h3> ENUNCIAT -> Implementació responsive. Crear una galeria d'imatges i carregar la versió més adequada</h3>
+    <div class="gallery">
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/siames_kwpoph.webp 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/siames_kwpoph.webp 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/siames_kwpoph.webp 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/siames_kwpoph.webp"
+            alt="Imatge gat siames" width="690" height="460">
+
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/olas_r1zxrz.jpg 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/olas_r1zxrz.jpg 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/olas_r1zxrz.jpg 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/olas_r1zxrz.jpg"
+            alt="Imatge olas" loading="lazy" width="690" height="460">
+
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/impresionSol_safpox.webp 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/impresionSol_safpox.webp 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/impresionSol_safpox.webp 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/nubes_gcaahi.jpg"
+            alt="Imatge impresion sol" loading="lazy" width="690" height="460">
+
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/gato_fohzi3.jpg 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/gato_fohzi3.jpg 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/gato_fohzi3.jpg 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/gato_fohzi3.jpg"
+            alt="Imatge gat dormint" loading="lazy" width="690" height="460">
+
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/nocheEstrellada_yb9hov.avif 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/nocheEstrellada_yb9hov.avif 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/nocheEstrellada_yb9hov.avif 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/nocheEstrellada_yb9hov.avif"
+            alt="Imatge nit estrellada" loading="lazy" width="690" height="460">
+
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/paisaje_k3ildz.jpg 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/paisaje_k3ildz.jpg 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/paisaje_k3ildz.jpg 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/paisaje_k3ildz.jpg"
+            alt="Imatge paisatge de nit" loading="lazy" width="690" height="460">
+
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/rellotges_oeu9br.jpg 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/rellotges_oeu9br.jpg 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/rellotges_oeu9br.jpg 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/rellotges_oeu9br.jpg"
+            alt="Imatge rellotges fosos" loading="lazy" width="690" height="460">
+
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/nubes_gcaahi.jpg 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/nubes_gcaahi.jpg 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/nubes_gcaahi.jpg 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/nubes_gcaahi.jpg"
+            alt="Imatge nubes" loading="lazy" width="690" height="460">
+
+        <img srcset="
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_400,f_auto,q_auto/venus_cfwmfo.jpg 400w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/venus_cfwmfo.jpg 800w,
+                https://res.cloudinary.com/dadhzxpnj/image/upload/w_1200,f_auto,q_auto/venus_cfwmfo.jpg 1200w
+            " sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1024px) 50vw,
+                (max-width: 1240px) 33vw,
+                400px
+            " src="https://res.cloudinary.com/dadhzxpnj/image/upload/w_800,f_auto,q_auto/venus_cfwmfo.jpg"
+            alt="Imatge venus de milo" loading="lazy" width="690" height="460">
+    </div>
+    <h2 class="titleAct">Activitat 4 - Càrrega diferida (Lazy Loading)</h2>
+
+    <h3>ENUNCIAT -> Explica per què la primera imatge de la pàgina NO hauria de portar l'atribut loading="lazy".</h3>
+    <p class="expAct4">La primera imatge que apareix a la pàgina no ha de portar l'atribut <span
+            class="spanBold">'loading="lazy"'</span> ja que al ser el primer element visual que es mostra a la pantalla
+        és important que es carregui de forma immediata per tal de oferir a l'usuari una experiència fluida. En altres
+        paraules, si la imatge es carregues de manera duferuda, causaria un retard en la visualització del contingut
+        principal i afectgar negativament l'experiencia de l'usuari. <br />
+        A més, no incloure aquest atribut a la primera imatge permet al navegador prioritzar la càrrega de les imatges
+        que es troben a la part superior de la pàgina.</p>
+
+    <h3>Verifica com les imatges es descarreguen dinàmicament a mesura que es fa scroll cap avall</h3>
+
+    <table class="tableScroll">
+        <thead>
+            <tr>
+                <th>Quan es carrega la pantalla</th>
+                <th>Al fer scroll</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="./media/alRecarregar.webp" alt="Imatge al recarregar el navegador" class="imgScroll" />
+                </td>
+                <td><img src="./media/fentScroll.webp" alt="Imatge despres de fer scroll" class="imgScroll" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

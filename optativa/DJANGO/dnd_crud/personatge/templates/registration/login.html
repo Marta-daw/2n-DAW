@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LOGIN</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+
+    <body class="bodyLogin">
+        <h2>Login</h2>
+
+        <form method="post" class="formLogin">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btnEnter">Entrar</button>
+        </form>
+        <img src="{% static 'media/dado.webp' %}" alt="Dungeons and Dragons" class="imgForm">
+    </body>
+</html>

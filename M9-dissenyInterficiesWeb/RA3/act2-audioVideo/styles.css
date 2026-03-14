@@ -1,0 +1,170 @@
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ :root {
+     --bg: #0d0d0f;
+     --surface: #16161a;
+     --border: #2a2a30;
+     --accent: #ff4d4d;
+     --accent2: #ff9a3c;
+     --text: #f0f0f0;
+     --muted: #515164;
+ }
+
+ body {
+     background: var(--text);
+     color: var(--bg);
+     font-family: 'DM Sans', sans-serif;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 2rem 1rem 4rem;
+ }
+
+ header {
+     margin-bottom: 2.5rem;
+     animation: fadeUp 0.6s ease both;
+     text-align: center;
+ }
+
+ .tag {
+     font-family: 'Syne', sans-serif;
+     color: var(--accent);
+     border: 1px solid var(--accent);
+     padding: 0.75rem;
+     font-weight: bold;
+     margin: 0 auto 1rem auto;
+     max-width: max-content;
+
+ }
+
+ h1 {
+     font-family: 'Syne', sans-serif;
+     font-size: 1.75rem;
+     color: var(--bg);
+ }
+
+ .subtitle {
+     color: var(--muted);
+     font-size: 1.5rem;
+     font-weight: bold;
+ }
+
+ /* Video container responsive */
+ .wrapper {
+     width: 100%;
+     margin: 0 auto;
+     /* 16:9 */
+     overflow: hidden;
+     animation: fadeUp 0.6s 0.15s ease both;
+ }
+
+ .wrapper iframe {
+     width: 100%;
+     height: 100%;
+     border: none;
+     border-radius: 12px;
+ }
+
+ .videoSection {
+     width: 80%;
+     height: 800px;
+     margin: 0 auto 65px auto;
+ }
+
+ /* Instruccions accessibilitat */
+ .accessPanel {
+     background: var(--surface);
+     border: 1px solid var(--border);
+     border-radius: 12px;
+     padding: 1.5rem 2rem;
+     animation: fadeUp 0.6s 0.3s ease both;
+     width: 80%;
+     margin: 0 auto
+ }
+
+ .accessPanel h2 {
+     font-family: 'Syne', sans-serif;
+     font-size: 1.5rem;
+     font-weight: bold;
+     letter-spacing: 0.1em;
+     color: var(--accent2);
+     margin-bottom: 1.25rem;
+
+ }
+
+ .keyGrid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 1rem;
+ }
+
+ .item {
+     display: flex;
+     align-items: center;
+     gap: 0.75rem;
+     padding: 0.6rem 0.8rem;
+     background: var(--bg);
+     border-radius: 8px;
+     border: 1px solid var(--border);
+     transition: border-color 0.2s;
+ }
+
+ kbd {
+     font-family: 'Syne', monospace;
+     font-size: 1.75rem;
+     color: #fff;
+     padding: 0.2rem 1.5rem;
+     border: 1px solid #7a7878;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .descrip {
+     font-size: 1.75rem;
+     color: var(--text);
+
+ }
+
+ .ferProva {
+     margin-top: 1.25rem;
+     padding: 1rem;
+     background: rgba(255, 77, 77, 0.4);
+     border-left: 3px solid var(--accent);
+     font-size: 1.65rem;
+     line-height: 2;
+     color: var(--bg);
+
+     &.strongT {
+         color: var(--surface);
+     }
+ }
+
+
+ @keyframes fadeUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @media (max-width: 870px) {
+     .accessPanel {
+         padding: 1rem;
+     }
+
+     .keyGrid {
+         grid-template-columns: 1fr;
+     }
+ }

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulari dels personatges</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="bodyFormPerson">
+    <h1 class="h1Form">Formulari</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="btnSave">Guardar</button>
+    </form>
+
+    <img src="{% static 'media/dado.webp' %}" alt="Dungeons and Dragons" class="imgForm">
+</body>
+
+</html>

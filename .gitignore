@@ -1,2 +1,135 @@
 optativa/DJANGO/venv/
-M9-dissenyInterficiesWeb/RA2/act.2/public/lib
+M9-dissenyInterficiesWeb/RA2/act.2/public/lib/bootstrap
+
+# ========================
+# JavaScript / Node — React, Vue
+# ========================
+# Dependencias
+**/node_modules/
+**/.pnp
+**/.pnp.js
+**/.yarn/cache
+**/.yarn/unplugged
+
+# Build outputs
+**/dist/
+**/build/
+**/.next/
+**/.nuxt/
+**/.output/
+**/out/
+
+# Cache
+**/.cache/
+**/.parcel-cache/
+**/vite-dist/
+
+# Logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# Misc
+**/.DS_Store
+**/Thumbs.db
+
+# ========================
+# PHP — Laravel
+# ========================
+# Dependencias
+**/vendor/
+
+# Laravel específico
+**/bootstrap/cache/*.php
+**/storage/logs/*.log
+**/storage/framework/cache/
+**/storage/framework/sessions/
+**/storage/framework/views/
+
+# Build assets
+**/public/hot
+**/public/storage
+**/public/mix-manifest.json
+
+# Config local
+**/.phpunit.result.cache
+**/phpunit.xml
+
+# ========================
+# Python — Django
+# ========================
+# Bytecode
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/*.pyc
+
+# Entornos virtuales
+**/.venv/
+**/venv/
+**/env/
+**/.env/
+**/ENV/
+
+# Django específico
+**/db.sqlite3
+**/db.sqlite3-journal
+**/media/
+**/staticfiles/
+**/static_root/
+**/*.mo
+
+# Testing / coverage
+**/.pytest_cache/
+**/.coverage
+**/htmlcov/
+**/.tox/
+
+# Distribución
+**/*.egg-info/
+**/dist/
+**/.eggs/
+
+# ========================
+# Servidores — Apache, Tomcat
+# ========================
+# Apache
+**/.htpasswd
+**/access.log
+**/error.log
+**/*.pid
+
+# Tomcat
+**/target/
+**/*.war
+**/*.ear
+**/*.class
+**/WEB-INF/lib/
+**/catalina.out
+
+# Java general
+**/*.jar
+**/.gradle/
+**/gradle/
+**/build/
+**/out/
+
+# ========================
+# Variables de entorno y secretos
+# ========================
+# ¡MUY IMPORTANTE — nunca subir al repo!
+**/.env
+**/.env.local
+**/.env.*.local
+**/.env.production
+**/.env.staging
+**/.env.test
+
+# Claves y certificados
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/secrets/
+**/.secrets

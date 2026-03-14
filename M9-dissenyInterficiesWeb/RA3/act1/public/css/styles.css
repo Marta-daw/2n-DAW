@@ -1,0 +1,98 @@
+.bodyOptim {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.h1Title {
+    background-color: #89cadc;
+    padding: 8px 18px;
+    width: 50%;
+    text-align: center;
+    margin: 2px auto 15px auto;
+}
+
+.titleAct {
+    border: 2px solid #0c69a2;
+    padding: 5px 10px;
+    width: 65%;
+    margin: 2px auto 15px auto;
+    text-align: center;
+}
+
+.divInfoMetadades {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.enunciatMetadades {
+    font-weight: bold;
+    border-bottom: 2px solid #0c69a2;
+}
+
+.btnToGallery {
+    background-color: #89cadc;
+    padding: 10px;
+    border: 2px solid #0c69a2;
+    margin: 15px 0;
+    font-size: 24px;
+
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+
+    & a:hover {
+        font-weight: bold;
+    }
+}
+
+.imgSquoosh {
+    width: auto;
+    height: 250px;
+    padding-right: 20px;
+}
+
+.divCapturesSquoosh {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+tr,
+th,
+td {
+    border: 2px solid #0c69a2;
+    padding: 10px;
+}
+
+.tableGif,
+.tableOptimIMG {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0 auto 25px auto;
+}
+
+.spanBold {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+/* Tablet: 2 columnes */
+@media (min-width: 765px) and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* PC: 3 columnes */
+@media (min-width: 1025px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,24 @@
+.catalegApp {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titleACT {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: var(--padding-xlarge) 0;
+    border: 2px solid var(--color-text);
+}
+
+.carregant {
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+}
+
+.donutsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding-xlarge);
+}

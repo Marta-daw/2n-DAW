@@ -1,0 +1,47 @@
+.donutCard {
+    background: var(--color-white);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donutHeader {
+    background: var(--color-primary);
+    color: var(--color-white);
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+}
+
+.donutIMG {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donutPrice {
+    padding: var(--padding-medium);
+    color: var(--color-text2);
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    text-align: center;
+}
+
+.donutForm {
+    font-size: var(--font-size-xlarge);
+    padding: var(--padding-medium);
+}
+
+.formGroup {
+    font-size: var(--font-size-xlarge);
+    margin-bottom: var(--padding-medium);
+}
+
+.quantityGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
