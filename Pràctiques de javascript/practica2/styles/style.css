@@ -1,0 +1,150 @@
+#headerForm {
+    background-color: #516379;
+    padding: 10px;
+}
+
+#bodyForm  {
+    margin: 0;
+}
+
+#bodyGaleria{
+    margin: 0;
+}
+
+.botonCambioPag{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #86abd8;
+    font-size: 18px;
+}
+
+.linkOtraPage{
+    color: black;
+    text-decoration: none;
+}
+
+#sectionForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#app{
+    margin-right: 40px;
+    width: 50%;
+}
+
+#personatgeForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 40px 20px 20px 20px;
+    border: 2px solid #516379;
+    border-radius: 2px;
+    background-color: #e0e4f5;
+    font-family: sans-serif;
+}
+
+#contenidorCarta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+    background-color: #e0e4f5;
+}
+
+#contenidorCartaCreada{
+    width: 50%;
+}
+
+.h1crearPerson, .h1cartaPerson, .h1galeria {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 5px;
+}
+
+#saveButton, #resetButton {
+    display: inline;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #516379;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    width: 25%;
+    margin-right: 15px;
+}
+
+#descripcio {
+    height: 105px;
+}
+
+#imatge{
+    margin-bottom: 45px;
+}
+
+#nom, #origen, #casa {
+    padding: 10px;
+}
+
+#tipus, #estat {
+    padding: 10px;
+    width: 40%;
+}
+
+.cartaPers{
+    max-width: 300px;
+    font-family: sans-serif;
+    margin: 10px 10px 0 20px;
+}
+
+.imgCarta {
+    width: 100%;
+    height: auto;
+}
+
+.tituloCarta {
+    padding: 15px;
+    margin: 0;
+    background-color: #720808;
+    color: white;
+    text-align: center;
+}
+
+.descripCarta {
+    padding: 15px;
+    margin: 0;
+    width: 90%; /* se ajusta al ancho de la tarjeta */
+    word-wrap: break-word; /* rompe palabras largas */
+    overflow-wrap: break-word;
+    hyphens: auto; /* agrega guiones si es necesario */
+    text-align: justify; /* o left, según prefieras */
+    line-height: 1.5; /* espaciado entre líneas */
+    font-size: 13px; /* tamaño de fuente más pequeño para descripciones largas */
+    border-top: #e0e4f5 1px solid;
+}
+
+.tablaCarta {
+    width: 100%;
+    border-collapse: collapse;
+    
+    tr{
+        border-top: #e0e4f5 1px solid;
+    }
+}
+
+.tablaCarta th {
+    text-align: left;
+    padding: 15px 8px 15px 15px;
+    width: 50%;
+}
+
+.tablaCarta, .descripCarta{
+    color: white;
+    background: linear-gradient(90deg, #680909 0%, #380505 50%, #010000 100%);
+}
